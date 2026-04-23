@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Ejer1.css">
+</head>
+<body>
+    <div class="card">
+    <h2>Bienvenido al Calentamiento</h2>
+    <input type="text" id="nombreUsuario" placeholder="Escribe tu nombre">
+    <button onclick="saludar()">Entrar a la cancha</button>
+    
+    <p id="mensajeSaludo"></p>
+</div>
+<script>
+        function saludar() {
+            const nombre = document.getElementById('nombreUsuario').value;
+            if (nombre.trim() !== "") {
+                document.getElementById('mensajeSaludo').innerText = `¡Hola, ${nombre}! Bienvenido.`;
+            } else {
+                alert("Por favor, ingresa un nombre.");
+            }
+        }
+    </script>
+</body>
+</html>
